@@ -1,0 +1,16 @@
+@import "src/assets/variables.scss";
+
+.button {
+  width: 20rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: $defaul-shadow;
+  background-color: $btn-bg-color;
+  color: $btn-text-color;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+}
