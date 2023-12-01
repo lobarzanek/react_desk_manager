@@ -1,0 +1,56 @@
+@import "src/assets/variables.scss";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  background-color: $bg-color;
+  color: $text-color;
+  box-shadow: $defaul-shadow;
+  .left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-left: 4rem;
+    .logo {
+      width: 4rem;
+      height: 4rem;
+      background-color: rgb(17, 0, 255);
+    }
+    .links {
+      display: flex;
+      gap: 4rem;
+
+      .nav-link {
+        padding: 0.5rem 0.6rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $text-color;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s, color 0.3s;
+        &.active {
+          background-color: $nav-hover-bg-color;
+          color: $nav-hover-text-color;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: $nav-hover-bg-color;
+          color: $nav-hover-text-color;
+        }
+      }
+    }
+  }
+  .right-side {
+    padding: 2rem;
+    .user {
+      width: 4rem;
+      height: 4rem;
+      background-color: rgb(17, 0, 255);
+      border-radius: 50%;
+    }
+  }
+}
