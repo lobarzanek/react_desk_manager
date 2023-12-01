@@ -8,6 +8,7 @@
   background-color: $bg-color;
   color: $text-color;
   box-shadow: $defaul-shadow;
+  z-index: 1;
   .left-side {
     display: flex;
     align-items: center;
