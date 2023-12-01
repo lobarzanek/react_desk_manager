@@ -4,6 +4,7 @@ import { Route, NavLink, Routes, HashRouter } from "react-router-dom";
 //import styles
 import "./assets/reset.scss";
 import "./assets/fonts.scss";
+import "./assets/app.scss";
 
 //import Components
 import Home from "./pages/home/Home";
