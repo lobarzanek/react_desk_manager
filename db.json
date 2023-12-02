@@ -1,0 +1,136 @@
+{
+  "floors": [
+    {
+      "id": 1,
+      "name": "Piętro 1"
+    },
+    {
+      "id": 2,
+      "name": "Piętro 2"
+    }
+  ],
+  "rooms": [
+    {
+      "floorId": 1,
+      "id": 1,
+      "name": "Pokój 001"
+    },
+    {
+      "floorId": 1,
+      "id": 2,
+      "name": "Pokój 002"
+    },
+    {
+      "floorId": 1,
+      "id": 3,
+      "name": "Pokój 003"
+    },
+    {
+      "floorId": 2,
+      "id": 4,
+      "name": "Pokój 004"
+    },
+    {
+      "floorId": 2,
+      "id": 5,
+      "name": "Pokój 005"
+    },
+    {
+      "floorId": 2,
+      "id": 6,
+      "name": "Pokój 006"
+    }
+  ],
+  "desks": [
+    {
+      "roomId": 1,
+      "id": 1,
+      "name": "Biurko-001-01"
+    },
+    {
+      "roomId": 1,
+      "id": 2,
+      "name": "Biurko-001-02"
+    },
+    {
+      "roomId": 1,
+      "id": 3,
+      "name": "Biurko-001-03"
+    },
+    {
+      "roomId": 2,
+      "id": 4,
+      "name": "Biurko-002-01"
+    },
+    {
+      "roomId": 2,
+      "id": 5,
+      "name": "Biurko-002-02"
+    },
+    {
+      "roomId": 2,
+      "id": 6,
+      "name": "Biurko-002-03"
+    },
+    {
+      "roomId": 3,
+      "id": 7,
+      "name": "Biurko-003-01"
+    },
+    {
+      "roomId": 3,
+      "id": 8,
+      "name": "Biurko-003-02"
+    },
+    {
+      "roomId": 3,
+      "id": 9,
+      "name": "Biurko-003-03"
+    },
+    {
+      "roomId": 4,
+      "id": 10,
+      "name": "Biurko-004-01"
+    },
+    {
+      "roomId": 4,
+      "id": 11,
+      "name": "Biurko-004-02"
+    },
+    {
+      "roomId": 4,
+      "id": 12,
+      "name": "Biurko-004-03"
+    },
+    {
+      "roomId": 5,
+      "id": 13,
+      "name": "Biurko-005-01"
+    },
+    {
+      "roomId": 5,
+      "id": 14,
+      "name": "Biurko-005-02"
+    },
+    {
+      "roomId": 5,
+      "id": 15,
+      "name": "Biurko-005-03"
+    },
+    {
+      "roomId": 6,
+      "id": 16,
+      "name": "Biurko-006-01"
+    },
+    {
+      "roomId": 6,
+      "id": 17,
+      "name": "Biurko-006-02"
+    },
+    {
+      "roomId": 6,
+      "id": 18,
+      "name": "Biurko-006-03"
+    }
+  ]
+}
