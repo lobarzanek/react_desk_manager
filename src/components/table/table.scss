@@ -1,0 +1,71 @@
+@import "src/assets/variables.scss";
+
+.tableComponent {
+  width: max-content;
+  border-radius: 0.3rem;
+  box-shadow: $defaul-shadow;
+  overflow: hidden;
+  table {
+    color: $text-color;
+    thead {
+      font-weight: bold;
+      text-transform: uppercase;
+      tr {
+        th {
+          font-size: 1.2rem;
+          padding: 1rem;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: $odd-bg-color;
+          color: $odd-text-color;
+        }
+        td {
+          padding: 1rem 4rem;
+        }
+      }
+    }
+  }
+  .paginate {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 2rem 1rem;
+    ul {
+      height: 50px;
+      display: flex;
+      list-style: none;
+      li {
+        display: flex;
+        &.pagination-active {
+          font-weight: bold;
+        }
+        &.pagination-disabled {
+          a {
+            color: $disabled-pagination-text;
+          }
+        }
+        &.pagination-next,
+        &.pagination-previous {
+          a {
+            font-weight: bold;
+          }
+        }
+        a {
+          padding: 0.5rem;
+          font-size: 1.2rem;
+          font-family: "Nunito", sans-serif;
+          color: $text-color;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

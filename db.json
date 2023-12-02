@@ -132,5 +132,95 @@
       "id": 18,
       "name": "Biurko-006-03"
     }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "userId": 1,
+      "floorNumber": "Piętro 1",
+      "roomNumber": "Pokój 002",
+      "deskNumber": "Biurko-002-01",
+      "date": "12-11-2023"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "floorNumber": "Piętro 1",
+      "roomNumber": "Pokój 003",
+      "deskNumber": "Biurko-003-03",
+      "date": "14-11-2023"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "floorNumber": "Piętro 2",
+      "roomNumber": "Pokój 005",
+      "deskNumber": "Biurko-005-01",
+      "date": "15-11-2023"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "floorNumber": "Piętro 1",
+      "roomNumber": "Pokój 001",
+      "deskNumber": "Biurko-001-02",
+      "date": "18-11-2023"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "floorNumber": "Piętro 1",
+      "roomNumber": "Pokój 002",
+      "deskNumber": "Biurko-002-01",
+      "date": "19-11-2023"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "floorNumber": "Piętro 1",
+      "roomNumber": "Pokój 003",
+      "deskNumber": "Biurko-003-03",
+      "date": "20-11-2023"
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "floorNumber": "Piętro 2",
+      "roomNumber": "Pokój 005",
+      "deskNumber": "Biurko-005-01",
+      "date": "21-11-2023"
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "floorNumber": "Piętro 1",
+      "roomNumber": "Pokój 001",
+      "deskNumber": "Biurko-001-02",
+      "date": "22-11-2023"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "floorNumber": "Piętro 1",
+      "roomNumber": "Pokój 003",
+      "deskNumber": "Biurko-003-03",
+      "date": "23-11-2023"
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "floorNumber": "Piętro 2",
+      "roomNumber": "Pokój 005",
+      "deskNumber": "Biurko-005-01",
+      "date": "24-11-2023"
+    },
+    {
+      "id": 11,
+      "userId": 1,
+      "floorNumber": "Piętro 1",
+      "roomNumber": "Pokój 001",
+      "deskNumber": "Biurko-001-02",
+      "date": "25-11-2023"
+    }
   ]
 }
