@@ -1,0 +1,15 @@
+@import "src/assets/variables.scss";
+
+.datePicker {
+  width: 20rem;
+  height: 4rem;
+  padding: 01rem;
+  color: $text-color;
+  font-size: 1.3rem;
+  font-family: "Nunito", sans-serif;
+  border-radius: 0.3rem;
+  border: none;
+  box-shadow: $defaul-shadow;
+  background-color: $bg-color;
+  text-align: center;
+}
