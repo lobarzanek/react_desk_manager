@@ -74,14 +74,16 @@ const ChooseBox = ({ type, selectedId, onChange }) => {
     getBoxData();
   }, [selectedId]);
   return (
-    <select value={value} className="chooseBox" onChange={handleOptionChange}>
-      <option value={""}>{defValue}</option>
-      {boxData.map((option) => (
-        <option value={option.name} key={option.id} id={option.id}>
-          {option.name}
-        </option>
-      ))}
-    </select>
+    <div className={`chooseBox ${type}`}>
+      <select value={value} className={`select`} onChange={handleOptionChange}>
+        <option value={""}>{defValue}</option>
+        {boxData.map((option) => (
+          <option value={option.name} key={option.id} id={option.id}>
+            {option.name}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 
