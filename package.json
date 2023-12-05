@@ -9,7 +9,10 @@
     "react-dom": "^18.2.0",
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.20.1",
-    "sass": "^1.69.5"
+    "react-tooltip": "^5.25.0",
+    "sass": "^1.69.5",
+    "uuid": "^9.0.1",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"

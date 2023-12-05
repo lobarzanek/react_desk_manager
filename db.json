@@ -13,7 +13,209 @@
     {
       "floorId": 1,
       "id": 1,
-      "name": "Pokój 001"
+      "name": "Pokój 001",
+      "svg": {
+        "rect": [
+          {
+            "id": 1,
+            "deskName": "B-001",
+            "_className": "claimed",
+            "_x": "88.706",
+            "_y": "102.181",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "id": 2,
+            "deskName": "B-002",
+            "_className": "free",
+            "_x": "182.58",
+            "_y": "102.181",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-099",
+            "_className": "claimed",
+            "_x": "276.455",
+            "_y": "102.181",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-004",
+            "_className": "free",
+            "_x": "370.329",
+            "_y": "102.181",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-045",
+            "_className": "claimed",
+            "_x": "88.706",
+            "_y": "145.026",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-005",
+            "_className": "free",
+            "_x": "182.58",
+            "_y": "145.026",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-006",
+            "_className": "claimed",
+            "_x": "276.455",
+            "_y": "145.026",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-007",
+            "_className": "claimed",
+            "_x": "370.329",
+            "_y": "145.026",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-008",
+            "_className": "free",
+            "_x": "88.706",
+            "_y": "222.146",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-009",
+            "_className": "claimed",
+            "_x": "182.58",
+            "_y": "222.146",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-010",
+            "_className": "free",
+            "_x": "276.455",
+            "_y": "222.146",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-011",
+            "_className": "free",
+            "_x": "370.329",
+            "_y": "222.146",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-012",
+            "_className": "free",
+            "_x": "88.706",
+            "_y": "264.99",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-013",
+            "_className": "free",
+            "_x": "182.58",
+            "_y": "264.99",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-014",
+            "_className": "free",
+            "_x": "276.455",
+            "_y": "264.99",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-015",
+            "_className": "free",
+            "_x": "370.329",
+            "_y": "264.99",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-016",
+            "_className": "free",
+            "_x": "88.706",
+            "_y": "342.11",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-017",
+            "_className": "claimed",
+            "_x": "182.58",
+            "_y": "342.11",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-018",
+            "_className": "free",
+            "_x": "276.455",
+            "_y": "342.11",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-019",
+            "_className": "free",
+            "_x": "370.329",
+            "_y": "342.11",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-020",
+            "_className": "free",
+            "_x": "88.706",
+            "_y": "384.955",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-021",
+            "_className": "free",
+            "_x": "182.58",
+            "_y": "384.955",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-022",
+            "_className": "blocked",
+            "_x": "276.455",
+            "_y": "384.955",
+            "_width": "80.464",
+            "_height": "34.275"
+          },
+          {
+            "deskName": "B-023",
+            "_className": "claimed",
+            "_x": "370.329",
+            "_y": "384.955",
+            "_width": "80.464",
+            "_height": "34.275"
+          }
+        ],
+        "_viewBox": "60 80 422.975 355.331",
+        "_width": "422.975",
+        "_height": "355.331",
+        "_xmlns": "http://www.w3.org/2000/svg"
+      }
     },
     {
       "floorId": 1,

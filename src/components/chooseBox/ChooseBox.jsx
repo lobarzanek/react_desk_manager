@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import "./chooseBox.scss";
 
-const ChooseBox = ({ type, selectedId, onChange }) => {
+const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
+  const ref = useRef(null);
   const [value, setValue] = useState("");
   const [defValue, setDefValue] = useState("");
   const [boxData, setBoxData] = useState([]);
@@ -61,6 +62,14 @@ const ChooseBox = ({ type, selectedId, onChange }) => {
     }
   }
 
+  const setValueToChoosenDesk = () => {
+    if (boxData.length > 0 && secondId > 0) {
+      const desk = boxData.find((d) => d.id == secondId);
+      const element = ref.current;
+      element.value = desk.name;
+    }
+  };
+
   useState(() => {
     if (type === "floor") {
       getBoxData();
@@ -73,9 +82,21 @@ const ChooseBox = ({ type, selectedId, onChange }) => {
     setDefaultValue();
     getBoxData();
   }, [selectedId]);
+
+  useEffect(() => {
+    if (type === "desk") {
+      setValueToChoosenDesk();
+    }
+  }, [secondId]);
+
   return (
     <div className={`chooseBox ${type}`}>
-      <select value={value} className={`select`} onChange={handleOptionChange}>
+      <select
+        ref={ref}
+        value={value}
+        className={`select`}
+        onChange={handleOptionChange}
+      >
         <option value={""}>{defValue}</option>
         {boxData.map((option) => (
           <option value={option.name} key={option.id} id={option.id}>

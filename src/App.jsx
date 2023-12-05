@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Route, NavLink, Routes, HashRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 
 //import styles
 import "./assets/reset.scss";
@@ -12,12 +11,12 @@ import History from "./pages/history/History";
 import Issue from "./pages/issue/Issue";
 import Navbar from "./components/navbar/Navbar";
 
-class App extends Component {
-  render() {
+const App = () => {
+  {
     return (
       <HashRouter>
         <div className="App">
-          <Navbar/>
+          <Navbar />
           <div className="content">
             <Routes>
               <Route exact path="/" element={<Home />}></Route>
@@ -29,5 +28,5 @@ class App extends Component {
       </HashRouter>
     );
   }
-}
+};
 export default App;

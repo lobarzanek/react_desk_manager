@@ -1,0 +1,38 @@
+@import "src/assets/variables.scss";
+
+.map {
+  svg {
+    width: 500px;
+    height: 500px;
+    rect {
+      position: relative;
+      &.free {
+        fill: $free-desk-background;
+      }
+      &.claimed {
+        fill: $claimed-desk-background;
+      }
+      &.blocked {
+        fill: $blocked-desk-background;
+      }
+      &.selected {
+        fill: #3274d6;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .react-tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 0.3rem;
+    .title {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+}
