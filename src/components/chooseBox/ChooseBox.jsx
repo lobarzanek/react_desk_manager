@@ -1,5 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import {
+  GetBasicFloorInfo,
+  GetBasicRoomInfoByFloorId,
+  GetBasicDeskInfoByRoomId,
+} from "../../data/getData.js";
 import "./chooseBox.scss";
 
 const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
@@ -32,34 +37,25 @@ const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
     try {
       switch (type) {
         case "floor":
-          await axios.get("http://localhost:8000/floors").then((response) => {
-            if (response.statusText === "OK") {
-              setBoxData(response.data);
-            }
-          });
+          const floorResponse = await GetBasicFloorInfo();
+          if (floorResponse.status === 200 && floorResponse.data.length > 0) {
+            setBoxData(floorResponse.data);
+          }
           break;
         case "room":
-          await axios
-            .get(`http://localhost:8000/rooms?floorId=${selectedId}`)
-            .then((response) => {
-              if (response.statusText === "OK") {
-                setBoxData(response.data);
-              }
-            });
+          const roomResponse = await GetBasicRoomInfoByFloorId(selectedId);
+          if (roomResponse.status === 200 && roomResponse.data.length > 0) {
+            setBoxData(roomResponse.data);
+          }
           break;
         case "desk":
-          await axios
-            .get(`http://localhost:8000/desks?roomId=${selectedId}`)
-            .then((response) => {
-              if (response.statusText === "OK") {
-                setBoxData(response.data);
-              }
-            });
+          const deskResponse = await GetBasicDeskInfoByRoomId(selectedId);
+          if (deskResponse.status === 200 && deskResponse.data.length > 0) {
+            setBoxData(deskResponse.data);
+          }
           break;
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   }
 
   const setValueToChoosenDesk = () => {
