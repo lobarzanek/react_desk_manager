@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import axios from "axios";
 import {
   GetBasicFloorInfo,
   GetBasicRoomInfoByFloorId,
@@ -7,7 +6,14 @@ import {
 } from "../../data/getData.js";
 import "./chooseBox.scss";
 
-const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
+const ChooseBox = ({
+  type,
+  selectedId,
+  onChange,
+  secondId,
+  data,
+  selectedDate,
+}) => {
   const ref = useRef(null);
   const [value, setValue] = useState("");
   const [defValue, setDefValue] = useState("");
@@ -43,15 +49,19 @@ const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
           }
           break;
         case "room":
+          if (selectedId == 0) return;
           const roomResponse = await GetBasicRoomInfoByFloorId(selectedId);
           if (roomResponse.status === 200 && roomResponse.data.length > 0) {
             setBoxData(roomResponse.data);
           }
           break;
         case "desk":
-          const deskResponse = await GetBasicDeskInfoByRoomId(selectedId);
-          if (deskResponse.status === 200 && deskResponse.data.length > 0) {
-            setBoxData(deskResponse.data);
+          if (selectedId == 0) return;
+          if (data.desks.length > 0) {
+            const desks = data.desks.filter((d) => d.status === "Free");
+            setBoxData(desks);
+          } else {
+            setBoxData([]);
           }
           break;
       }
@@ -84,6 +94,12 @@ const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
       setValueToChoosenDesk();
     }
   }, [secondId]);
+
+  useEffect(() => {
+    if (type === "desk") {
+      getBoxData();
+    }
+  }, [data]);
 
   return (
     <div className={`chooseBox ${type}`}>

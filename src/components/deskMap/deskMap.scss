@@ -6,20 +6,29 @@
     height: 500px;
     rect {
       position: relative;
-      &.free {
+      &.Free {
         fill: $free-desk-background;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
-      &.claimed {
+      &.Claimed {
         fill: $claimed-desk-background;
-      }
-      &.blocked {
-        fill: $blocked-desk-background;
       }
       &.selected {
         fill: #3274d6;
       }
-      &:hover {
-        cursor: pointer;
+      &.Broken {
+        fill: $blocked-desk-background;
+      }
+
+      &.Claimed,
+      &.selected,
+      &.Broken {
+        &:hover {
+          cursor: auto;
+        }
       }
     }
   }
@@ -33,6 +42,23 @@
       font-weight: bold;
       font-size: 1rem;
       margin-bottom: 0.2rem;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      .wrapper-left,
+      .wrapper-right {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        gap: 0.4rem;
+      }
+      .wrapper-right {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
     }
   }
 }

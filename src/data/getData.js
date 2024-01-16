@@ -21,7 +21,18 @@ export async function GetBasicRoomInfoByFloorId(id) {
 
 export async function GetBasicDeskInfoByRoomId(id) {
   try {
-    const response = await axios.get(`${API_URL}Desk/basic/room/${id}`);
+    const response = await axios.get(`${API_URL}Desk/free/room/${id}`);
+    return response;
+  } catch {
+    return;
+  }
+}
+
+export async function GetRoomMap(id, date) {
+  try {
+    const response = await axios.get(
+      `${API_URL}Room/map/${id}?date=${date}T00%3A00%3A00.000Z`
+    );
     return response;
   } catch {
     return;
