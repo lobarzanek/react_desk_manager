@@ -30,14 +30,14 @@ export async function GetBasicDeskInfoByRoomId(id) {
 }
 
 export async function GetRoomMap(id, date) {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   try {
     const response = await axios.get(
       `${API_URL}Room/map/${id}?date=${date}T00%3A00%3A00.000Z`
     );
     return response;
-  } catch {
-    return;
-  }
+  } catch {}
 }
 
 export async function GetUserHistory() {
@@ -64,9 +64,14 @@ export async function SendDeskReservation(date, desk) {
         "Content-Type": "application/json",
       },
     });
+    if (response.status !== 201) {
+      return new Promise((reject) => {
+        reject(new Error());
+      });
+    }
     return response;
   } catch {
-    return;
+    throw new Error(error.message || "An error occurred");
   }
 }
 

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./loadingIcon.scss";
 import errorImg from "../../assets/images/cross.png";
 
-const LoadingIcon = ({ error }) => {
+const LoadingIcon = ({ error=false }) => {
   {
     useEffect(() => {}, [error]);
     return (

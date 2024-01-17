@@ -97,6 +97,7 @@ const ChooseBox = ({
   useEffect(() => {
     if (type === "desk") {
       getBoxData();
+      setDefaultValue();
     }
   }, [data]);
 

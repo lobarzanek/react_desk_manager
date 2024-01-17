@@ -10,6 +10,7 @@ import "./home.scss";
 
 const Home = () => {
   {
+    const [isLoading, SetIsLoading] = useState(false);
     const [selected, setSelected] = useState({
       floor: 0,
       room: 0,
@@ -32,29 +33,45 @@ const Home = () => {
         return;
       }
       try {
+        SetIsLoading(true);
         const mapResponse = await GetRoomMap(selected.room, selected.date);
         if (mapResponse.status === 200) {
           SetMapSVG(mapResponse.data.svgMap);
         } else {
           SetMapSVG(emptySVG);
         }
+        SetIsLoading(false);
       } catch {
         SetMapSVG(emptySVG);
+        SetIsLoading(false);
       }
     };
 
     const sendReservation = async () => {
       if (selected.date === "" || selected.desk == 0) {
-        toast.error("Musisz najpierw wybrać datę i biurko!")
+        toast.error("Musisz najpierw wybrać datę i biurko!");
         return;
       }
       try {
-        await toast.promise(SendDeskReservation(selected.date, selected.desk), {
-          pending: "Dodawanie rezerwacji..",
-          success: "Rezerwacja dodana! 👌",
-          error: "Nie udało się dodać rezerwacji 🤯",
-        });
-      } catch {}
+        SetIsLoading(true);
+        const deskResponse = await toast.promise(
+          SendDeskReservation(selected.date, selected.desk),
+          {
+            pending: "Dodawanie rezerwacji..",
+            success: "Rezerwacja dodana! 👌",
+            error: "Nie udało się dodać rezerwacji 🤯",
+          }
+        );
+        
+        if (deskResponse.status === 201) {
+          selected.desk = 0;
+          await getRoomSvg();
+        } else {
+          SetIsLoading(false);
+        }
+      } catch {
+        SetIsLoading(false);
+      }
     };
 
     const handleBoxChange = (selectedType, selectedValue) => {
@@ -91,6 +108,7 @@ const Home = () => {
           </div>
           <div className="shadow-box">
             <DeskMap
+              isLoading={isLoading}
               date={selected.date}
               roomId={selected.room}
               deskId={selected.desk}
