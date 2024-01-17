@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { GetRoomMap } from "../../data/restService.js";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { GetRoomMap, SendDeskReservation } from "../../data/restService.js";
 import ChooseBox from "../../components/chooseBox/ChooseBox";
 import Button from "../../components/button/Button";
 import DatePicker from "../../components/datePicker/datePicker";
@@ -41,6 +43,20 @@ const Home = () => {
       }
     };
 
+    const sendReservation = async () => {
+      if (selected.date === "" || selected.desk == 0) {
+        toast.error("Musisz najpierw wybrać datę i biurko!")
+        return;
+      }
+      try {
+        await toast.promise(SendDeskReservation(selected.date, selected.desk), {
+          pending: "Dodawanie rezerwacji..",
+          success: "Rezerwacja dodana! 👌",
+          error: "Nie udało się dodać rezerwacji 🤯",
+        });
+      } catch {}
+    };
+
     const handleBoxChange = (selectedType, selectedValue) => {
       setSelected((prevOptions) => ({
         ...prevOptions,
@@ -71,7 +87,7 @@ const Home = () => {
               secondId={selected.desk}
               onChange={handleBoxChange}
             />
-            <Button text={"Rezerwuj"} />
+            <Button text={"Rezerwuj"} onClick={sendReservation} />
           </div>
           <div className="shadow-box">
             <DeskMap
@@ -83,6 +99,18 @@ const Home = () => {
             />
           </div>
         </div>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={4000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable={false}
+          pauseOnHover
+          theme="colored"
+        />
       </div>
     );
   }
