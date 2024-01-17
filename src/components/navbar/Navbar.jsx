@@ -13,7 +13,7 @@ class Navbar extends Component {
               home
             </NavLink>
             <NavLink className="nav-link" to="/history">
-              historia zamówień
+              historia rezerwacji
             </NavLink>
             <NavLink className="nav-link" to="/issue">
               zgłoś usterke
