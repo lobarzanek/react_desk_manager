@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import Table from "../../components/table/Table";
 import LoadingIcon from "../../components/loadingIcon/LoadingIcon";
 import { GetUserHistory } from "../../data/restService.js";

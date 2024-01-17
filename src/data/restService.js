@@ -1,4 +1,5 @@
 import axios from "axios";
+import { resolvePath } from "react-router-dom";
 const API_URL = "https://localhost:7115/api/";
 const USER_ID = 1;
 
@@ -65,13 +66,11 @@ export async function SendDeskReservation(date, desk) {
       },
     });
     if (response.status !== 201) {
-      return new Promise((reject) => {
-        reject(new Error());
-      });
+      return Promise.reject("");
     }
     return response;
   } catch {
-    throw new Error(error.message || "An error occurred");
+    return Promise.reject("");
   }
 }
 
@@ -94,5 +93,20 @@ export async function SendIssue(desk, description) {
     return response;
   } catch {
     return;
+  }
+}
+
+export async function DeleteDeskReservation(desk) {
+  //timespan for show toast pending state
+  await new Promise((resolve) => setTimeout(resolve, 800));
+
+  try {
+    const response = await axios.delete(`${API_URL}Reservation/${desk}`);
+    if (response.status !== 204) {
+      return Promise.reject("");
+    }
+    return response;
+  } catch (error) {
+    return Promise.reject("");
   }
 }
