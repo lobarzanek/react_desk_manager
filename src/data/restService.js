@@ -48,3 +48,46 @@ export async function GetUserHistory() {
     return;
   }
 }
+
+export async function SendDeskReservation(date, desk) {
+  //timespan for show toast pending state
+  await new Promise((resolve) => setTimeout(resolve, 800));
+
+  const reservation = {
+    date: `${date}T00:00:00.000Z`,
+    userId: USER_ID,
+    deskId: desk,
+  };
+  try {
+    const response = await axios.post(`${API_URL}Reservation`, reservation, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return response;
+  } catch {
+    return;
+  }
+}
+
+export async function SendIssue(desk, description) {
+  //timespan for show toast pending state
+  await new Promise((resolve) => setTimeout(resolve, 800));
+
+  const reservation = {
+    reporterId: USER_ID,
+    deskId: desk,
+    description: description,
+    status: 1,
+  };
+  try {
+    const response = await axios.post(`${API_URL}Reservation`, reservation, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return response;
+  } catch {
+    return;
+  }
+}
