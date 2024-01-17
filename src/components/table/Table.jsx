@@ -31,10 +31,10 @@ const Table = ({ tableData }) => {
               .map((row, index) => (
                 <tr key={index}>
                   <td>{row.id}</td>
-                  <td>{row.floorNumber}</td>
-                  <td>{row.roomNumber}</td>
-                  <td>{row.deskNumber}</td>
-                  <td>{row.date}</td>
+                  <td>{row.floorName}</td>
+                  <td>{row.roomName}</td>
+                  <td>{row.deskName}</td>
+                  <td>{row.date.slice(0,10)}</td>
                 </tr>
               ))}
           </tbody>

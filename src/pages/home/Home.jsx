@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { GetRoomMap } from "../../data/getData.js";
+import { GetRoomMap } from "../../data/restService.js";
 import ChooseBox from "../../components/chooseBox/ChooseBox";
 import Button from "../../components/button/Button";
 import DatePicker from "../../components/datePicker/datePicker";

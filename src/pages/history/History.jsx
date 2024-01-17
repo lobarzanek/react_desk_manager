@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Table from "../../components/table/Table";
+import { GetUserHistory } from "../../data/restService.js";
 
 import "./history.scss";
 
 const History = () => {
-  const userId = 1;
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
     const getTableData = async () => {
       try {
-        await axios
-          .get(`http://localhost:8000/history?userId=${userId}`)
-          .then((response) => {
-            if (response.statusText === "OK") {
-              setTableData(response.data.slice(0).reverse());
-            }
-          });
+        const response = await GetUserHistory();
+        if (response.status === 200) {
+          console.log(response.data);
+          setTableData(response.data);
+        }
       } catch (error) {
         console.error("Error fetching table data:", error);
       }

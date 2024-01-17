@@ -1,5 +1,6 @@
 import axios from "axios";
 const API_URL = "https://localhost:7115/api/";
+const USER_ID = 1;
 
 export async function GetBasicFloorInfo() {
   try {
@@ -33,6 +34,15 @@ export async function GetRoomMap(id, date) {
     const response = await axios.get(
       `${API_URL}Room/map/${id}?date=${date}T00%3A00%3A00.000Z`
     );
+    return response;
+  } catch {
+    return;
+  }
+}
+
+export async function GetUserHistory() {
+  try {
+    const response = await axios.get(`${API_URL}Reservation/user/${USER_ID}`);
     return response;
   } catch {
     return;

@@ -2,8 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import {
   GetBasicFloorInfo,
   GetBasicRoomInfoByFloorId,
-  GetBasicDeskInfoByRoomId,
-} from "../../data/getData.js";
+} from "../../data/restService.js";
 import "./chooseBox.scss";
 
 const ChooseBox = ({
