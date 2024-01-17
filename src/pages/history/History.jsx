@@ -12,7 +12,6 @@ const History = () => {
       try {
         const response = await GetUserHistory();
         if (response.status === 200) {
-          console.log(response.data);
           setTableData(response.data);
         }
       } catch (error) {
