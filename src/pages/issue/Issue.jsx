@@ -42,14 +42,11 @@ const Issue = () => {
     }
 
     try {
-      await toast.promise(
-        SendIssue(selected.desk, selected.description),
-        {
-          pending: "Dodawanie zgłoszenia..",
-          success: "Zgłoszenie dodana! 👌",
-          error: "Nie udało się dodać zgłoszenia 🤯",
-        }
-      );
+      await toast.promise(SendIssue(selected.desk, selected.description), {
+        pending: "Dodawanie zgłoszenia..",
+        success: "Zgłoszenie dodane! 👌",
+        error: "Nie udało się dodać zgłoszenia.",
+      });
     } catch {}
   };
 

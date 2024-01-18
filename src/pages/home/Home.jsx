@@ -30,6 +30,7 @@ const Home = () => {
 
     const getRoomSvg = async () => {
       if (selected.room === 0 || selected.date == "") {
+        SetMapSVG(emptySVG);
         return;
       }
       try {
@@ -62,7 +63,7 @@ const Home = () => {
             error: "Nie udało się dodać rezerwacji 🤯",
           }
         );
-        
+
         if (deskResponse.status === 201) {
           selected.desk = 0;
           await getRoomSvg();
@@ -82,8 +83,15 @@ const Home = () => {
     };
 
     useEffect(() => {
+      selected.desk = 0;
       getRoomSvg();
     }, [selected.room, selected.date]);
+
+    useEffect(() => {
+      selected.room = 0;
+      selected.desk = 0;
+      getRoomSvg();
+    }, [selected.floor]);
 
     return (
       <div className="home">

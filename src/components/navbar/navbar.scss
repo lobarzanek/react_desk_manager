@@ -18,7 +18,6 @@
     .logo {
       width: 4rem;
       height: 4rem;
-      background-color: rgb(17, 0, 255);
     }
     .links {
       display: flex;
@@ -46,11 +45,14 @@
     }
   }
   .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     padding: 2rem;
     .user {
       width: 4rem;
       height: 4rem;
-      background-color: rgb(17, 0, 255);
       border-radius: 50%;
     }
   }
