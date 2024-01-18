@@ -21,12 +21,15 @@ const ChooseBox = ({
   const setDefaultValue = () => {
     switch (type) {
       case "floor":
+        setValue("");
         setDefValue("Wybierz piętro");
         break;
       case "room":
+        setValue("");
         setDefValue("Wybierz pokój");
         break;
       case "desk":
+        setValue("");
         setDefValue("Wybierz biurko");
         break;
     }
