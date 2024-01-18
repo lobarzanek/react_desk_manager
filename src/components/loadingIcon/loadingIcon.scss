@@ -1,0 +1,39 @@
+@import "src/assets/variables.scss";
+
+.loadingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  gap: 30px;
+
+  .circle-out {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: conic-gradient($bg-color 50%, $main-color);
+    .circle-in {
+      width: 40px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: $bg-color;
+    }
+  }
+}
+
+.rotateAnimation {
+  animation: rotateCircle 1.8s ease-in-out infinite both;
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

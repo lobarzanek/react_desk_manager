@@ -1,8 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
-import axios from "axios";
+import {
+  GetBasicFloorInfo,
+  GetBasicRoomInfoByFloorId,
+} from "../../data/restService.js";
 import "./chooseBox.scss";
 
-const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
+const ChooseBox = ({
+  type,
+  selectedId,
+  onChange,
+  secondId,
+  data,
+  issue = false,
+}) => {
   const ref = useRef(null);
   const [value, setValue] = useState("");
   const [defValue, setDefValue] = useState("");
@@ -32,34 +42,32 @@ const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
     try {
       switch (type) {
         case "floor":
-          await axios.get("http://localhost:8000/floors").then((response) => {
-            if (response.statusText === "OK") {
-              setBoxData(response.data);
-            }
-          });
+          const floorResponse = await GetBasicFloorInfo();
+          if (floorResponse.status === 200 && floorResponse.data.length > 0) {
+            setBoxData(floorResponse.data);
+          }
           break;
         case "room":
-          await axios
-            .get(`http://localhost:8000/rooms?floorId=${selectedId}`)
-            .then((response) => {
-              if (response.statusText === "OK") {
-                setBoxData(response.data);
-              }
-            });
+          if (selectedId == 0) return;
+          const roomResponse = await GetBasicRoomInfoByFloorId(selectedId);
+          if (roomResponse.status === 200 && roomResponse.data.length > 0) {
+            setBoxData(roomResponse.data);
+          }
           break;
         case "desk":
-          await axios
-            .get(`http://localhost:8000/desks?roomId=${selectedId}`)
-            .then((response) => {
-              if (response.statusText === "OK") {
-                setBoxData(response.data);
-              }
-            });
+          if (selectedId == 0) return;
+          if (!issue && data.desks.length > 0) {
+            const desks = data.desks.filter((d) => d.status === "Free");
+            setBoxData(desks);
+          } else if (issue && data.length > 0) {
+            const desks = data.filter((d) => d.status !== "Broken");
+            setBoxData(desks);
+          } else {
+            setBoxData([]);
+          }
           break;
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   }
 
   const setValueToChoosenDesk = () => {
@@ -88,6 +96,13 @@ const ChooseBox = ({ type, selectedId, onChange, secondId }) => {
       setValueToChoosenDesk();
     }
   }, [secondId]);
+
+  useEffect(() => {
+    if (type === "desk") {
+      getBoxData();
+      setDefaultValue();
+    }
+  }, [data]);
 
   return (
     <div className={`chooseBox ${type}`}>

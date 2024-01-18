@@ -25,6 +25,11 @@
         }
         td {
           padding: 1rem 4rem;
+          
+          .deleteBtn{
+            width: 20px;
+            cursor: pointer;
+          }
         }
       }
     }

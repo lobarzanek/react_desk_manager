@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 import Table from "../../components/table/Table";
-
+import LoadingIcon from "../../components/loadingIcon/LoadingIcon";
+import { GetUserHistory } from "../../data/restService.js";
 import "./history.scss";
 
 const History = () => {
-  const userId = 1;
   const [tableData, setTableData] = useState([]);
+  const [isLoading, SetIsLoading] = useState(true);
+  const [isError, SetIsError] = useState(false);
 
   useEffect(() => {
     const getTableData = async () => {
+      SetIsLoading(true);
       try {
-        await axios
-          .get(`http://localhost:8000/history?userId=${userId}`)
-          .then((response) => {
-            if (response.statusText === "OK") {
-              setTableData(response.data.slice(0).reverse());
-            }
-          });
+        const response = await GetUserHistory();
+        if (response.status === 200) {
+          setTableData(response.data);
+          SetIsLoading(false);
+        } else {
+          SetIsError(true);
+        }
       } catch (error) {
-        console.error("Error fetching table data:", error);
+        SetIsError(true);
       }
     };
 
@@ -29,7 +32,11 @@ const History = () => {
   return (
     <div className="history">
       <div className="wrapper">
-        <Table tableData={tableData} />
+        {isLoading ? (
+          <LoadingIcon error={isError} />
+        ) : (
+          <Table tableData={tableData} />
+        )}
       </div>
     </div>
   );
