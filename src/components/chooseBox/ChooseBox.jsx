@@ -11,7 +11,7 @@ const ChooseBox = ({
   onChange,
   secondId,
   data,
-  selectedDate,
+  issue = false,
 }) => {
   const ref = useRef(null);
   const [value, setValue] = useState("");
@@ -56,8 +56,11 @@ const ChooseBox = ({
           break;
         case "desk":
           if (selectedId == 0) return;
-          if (data.desks.length > 0) {
+          if (!issue && data.desks.length > 0) {
             const desks = data.desks.filter((d) => d.status === "Free");
+            setBoxData(desks);
+          } else if (issue && data.length > 0) {
+            const desks = data.filter((d) => d.status !== "Broken");
             setBoxData(desks);
           } else {
             setBoxData([]);

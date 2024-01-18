@@ -1,5 +1,4 @@
 import axios from "axios";
-import { resolvePath } from "react-router-dom";
 const API_URL = "https://localhost:7115/api/";
 const USER_ID = 1;
 
@@ -23,7 +22,7 @@ export async function GetBasicRoomInfoByFloorId(id) {
 
 export async function GetBasicDeskInfoByRoomId(id) {
   try {
-    const response = await axios.get(`${API_URL}Desk/free/room/${id}`);
+    const response = await axios.get(`${API_URL}Desk/basic/room/${id}`);
     return response;
   } catch {
     return;
@@ -78,21 +77,26 @@ export async function SendIssue(desk, description) {
   //timespan for show toast pending state
   await new Promise((resolve) => setTimeout(resolve, 800));
 
-  const reservation = {
-    reporterId: USER_ID,
-    deskId: desk,
+  const issue = {
     description: description,
     status: 1,
+    deskId: parseInt(desk),
+    reporterId: USER_ID,
   };
+
   try {
-    const response = await axios.post(`${API_URL}Reservation`, reservation, {
+    const response = await axios.post(`${API_URL}Issue`, issue, {
       headers: {
         "Content-Type": "application/json",
       },
     });
+    console.log(response);
+    if (response.status !== 201) {
+      return Promise.reject("");
+    }
     return response;
   } catch {
-    return;
+    return Promise.reject("");
   }
 }
 
