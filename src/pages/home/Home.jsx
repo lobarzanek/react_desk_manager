@@ -29,7 +29,6 @@ const Home = () => {
     const [mapSVG, SetMapSVG] = useState(emptySVG);
 
     const getRoomSvg = async () => {
-      console.log(selected);
       if (selected.room === 0 || selected.date == "") {
         SetMapSVG(emptySVG);
         return;
