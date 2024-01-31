@@ -11,418 +11,676 @@
   ],
   "rooms": [
     {
-      "floorId": 1,
       "id": 1,
-      "name": "Pokój 001",
-      "svg": {
-        "rect": [
+      "name": "Room #1",
+      "svgMap": {
+        "mapViewBox": "60 80 422.975 355.331",
+        "mapWidth": "422.975",
+        "mapHeight": "355.331",
+        "mapXmlns": "http://www.w3.org/2000/svg",
+        "desks": [
           {
             "id": 1,
-            "deskName": "B-001",
-            "_className": "claimed",
-            "_x": "88.706",
-            "_y": "102.181",
-            "_width": "80.464",
-            "_height": "34.275"
+            "name": "Desk #1",
+            "mouse": true,
+            "keyboard": false,
+            "dockStation": true,
+            "monitorNumber": 2,
+            "mapXLocation": "88.706",
+            "mapYLocation": "102.181",
+            "width": "80.464",
+            "height": "34.275",
+            "status": "Free"
           },
           {
             "id": 2,
-            "deskName": "B-002",
-            "_className": "free",
-            "_x": "182.58",
-            "_y": "102.181",
-            "_width": "80.464",
-            "_height": "34.275"
+            "name": "Desk #2",
+            "mouse": true,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 1,
+            "mapXLocation": "182.58",
+            "mapYLocation": "102.181",
+            "width": "80.464",
+            "height": "34.275",
+            "status": "Free"
           },
           {
-            "deskName": "B-099",
-            "_className": "claimed",
-            "_x": "276.455",
-            "_y": "102.181",
-            "_width": "80.464",
-            "_height": "34.275"
+            "id": 3,
+            "name": "Desk #3",
+            "mouse": true,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "276.455",
+            "mapYLocation": "102.181",
+            "width": "80.464",
+            "height": "34.275",
+            "status": "Free"
           },
           {
-            "deskName": "B-004",
-            "_className": "free",
-            "_x": "370.329",
-            "_y": "102.181",
-            "_width": "80.464",
-            "_height": "34.275"
+            "id": 4,
+            "name": "Desk #4",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "370.329",
+            "mapYLocation": "102.181",
+            "width": "80.464",
+            "height": "34.275",
+            "status": "Broken"
           },
           {
-            "deskName": "B-045",
-            "_className": "claimed",
-            "_x": "88.706",
-            "_y": "145.026",
-            "_width": "80.464",
-            "_height": "34.275"
+            "id": 5,
+            "name": "Desk #5",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "88.706",
+            "mapYLocation": "145.026",
+            "width": "80.464",
+            "height": "34.275",
+            "status": "Free"
           },
           {
-            "deskName": "B-005",
-            "_className": "free",
-            "_x": "182.58",
-            "_y": "145.026",
-            "_width": "80.464",
-            "_height": "34.275"
+            "id": 6,
+            "name": "Desk #6",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "182.58",
+            "mapYLocation": "145.026",
+            "width": "80.464",
+            "height": "34.275",
+            "status": "Broken"
           },
           {
-            "deskName": "B-006",
-            "_className": "claimed",
-            "_x": "276.455",
-            "_y": "145.026",
-            "_width": "80.464",
-            "_height": "34.275"
+            "id": 7,
+            "name": "Desk #7",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "276.455",
+            "mapYLocation": "145.026",
+            "width": "80.464",
+            "height": "34.275",
+            "status": "Free"
           },
           {
-            "deskName": "B-007",
-            "_className": "claimed",
-            "_x": "370.329",
-            "_y": "145.026",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-008",
-            "_className": "free",
-            "_x": "88.706",
-            "_y": "222.146",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-009",
-            "_className": "claimed",
-            "_x": "182.58",
-            "_y": "222.146",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-010",
-            "_className": "free",
-            "_x": "276.455",
-            "_y": "222.146",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-011",
-            "_className": "free",
-            "_x": "370.329",
-            "_y": "222.146",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-012",
-            "_className": "free",
-            "_x": "88.706",
-            "_y": "264.99",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-013",
-            "_className": "free",
-            "_x": "182.58",
-            "_y": "264.99",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-014",
-            "_className": "free",
-            "_x": "276.455",
-            "_y": "264.99",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-015",
-            "_className": "free",
-            "_x": "370.329",
-            "_y": "264.99",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-016",
-            "_className": "free",
-            "_x": "88.706",
-            "_y": "342.11",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-017",
-            "_className": "claimed",
-            "_x": "182.58",
-            "_y": "342.11",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-018",
-            "_className": "free",
-            "_x": "276.455",
-            "_y": "342.11",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-019",
-            "_className": "free",
-            "_x": "370.329",
-            "_y": "342.11",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-020",
-            "_className": "free",
-            "_x": "88.706",
-            "_y": "384.955",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-021",
-            "_className": "free",
-            "_x": "182.58",
-            "_y": "384.955",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-022",
-            "_className": "blocked",
-            "_x": "276.455",
-            "_y": "384.955",
-            "_width": "80.464",
-            "_height": "34.275"
-          },
-          {
-            "deskName": "B-023",
-            "_className": "claimed",
-            "_x": "370.329",
-            "_y": "384.955",
-            "_width": "80.464",
-            "_height": "34.275"
+            "id": 8,
+            "name": "Desk #8",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "370.329",
+            "mapYLocation": "145.026",
+            "width": "80.464",
+            "height": "34.275",
+            "status": "Free"
           }
-        ],
-        "_viewBox": "60 80 422.975 355.331",
-        "_width": "422.975",
-        "_height": "355.331",
-        "_xmlns": "http://www.w3.org/2000/svg"
+        ]
       }
     },
     {
-      "floorId": 1,
       "id": 2,
-      "name": "Pokój 002"
+      "name": "Room #2",
+      "svgMap": {
+        "mapViewBox": "60 80 422.975 355.331",
+        "mapWidth": "422.975",
+        "mapHeight": "355.331",
+        "mapXmlns": "http://www.w3.org/2000/svg",
+        "desks": [
+          {
+            "id": 9,
+            "name": "R2-D-1",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "88",
+            "mapYLocation": "130",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          },
+          {
+            "id": 18,
+            "name": "R2-D-10",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "390",
+            "mapYLocation": "130",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          },
+          {
+            "id": 19,
+            "name": "R2-D-11",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "390",
+            "mapYLocation": "215",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Broken"
+          },
+          {
+            "id": 20,
+            "name": "R2-D-12",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "390",
+            "mapYLocation": "300",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          },
+          {
+            "id": 10,
+            "name": "R2-D-2",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "88",
+            "mapYLocation": "215",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          },
+          {
+            "id": 11,
+            "name": "R2-D-3",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "88",
+            "mapYLocation": "300",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          },
+          {
+            "id": 12,
+            "name": "R2-D-4",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "225",
+            "mapYLocation": "130",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          },
+          {
+            "id": 13,
+            "name": "R2-D-5",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "225",
+            "mapYLocation": "215",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Broken"
+          },
+          {
+            "id": 14,
+            "name": "R2-D-6",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "225",
+            "mapYLocation": "300",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          },
+          {
+            "id": 15,
+            "name": "R2-D-7",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "270",
+            "mapYLocation": "130",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Broken"
+          },
+          {
+            "id": 16,
+            "name": "R2-D-8",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "270",
+            "mapYLocation": "215",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          },
+          {
+            "id": 17,
+            "name": "R2-D-9",
+            "mouse": false,
+            "keyboard": false,
+            "dockStation": false,
+            "monitorNumber": 0,
+            "mapXLocation": "270",
+            "mapYLocation": "300",
+            "width": "34.275",
+            "height": "80.464",
+            "status": "Free"
+          }
+        ]
+      }
     },
     {
-      "floorId": 1,
-      "id": 3,
-      "name": "Pokój 003"
-    },
-    {
-      "floorId": 2,
-      "id": 4,
-      "name": "Pokój 004"
-    },
-    {
-      "floorId": 2,
-      "id": 5,
-      "name": "Pokój 005"
-    },
-    {
-      "floorId": 2,
-      "id": 6,
-      "name": "Pokój 006"
+      "id": 7,
+      "name": "Pokój 3",
+      "svgMap": {
+        "mapViewBox": "",
+        "mapWidth": "",
+        "mapHeight": "",
+        "mapXmlns": "http://www.w3.org/2000/svg",
+        "desks": []
+      }
     }
   ],
   "desks": [
     {
-      "roomId": 1,
       "id": 1,
-      "name": "Biurko-001-01"
+      "name": "Desk #1",
+      "mapXLocation": "88.706",
+      "mapYLocation": "102.181",
+      "width": "80.464",
+      "height": "34.275",
+      "roomId": 1,
+      "roomName": "Room #1",
+      "status": 0
     },
     {
-      "roomId": 1,
       "id": 2,
-      "name": "Biurko-001-02"
-    },
-    {
+      "name": "Desk #2",
+      "mapXLocation": "182.58",
+      "mapYLocation": "102.181",
+      "width": "80.464",
+      "height": "34.275",
       "roomId": 1,
+      "roomName": "Room #1",
+      "status": 0
+    },
+    {
       "id": 3,
-      "name": "Biurko-001-03"
+      "name": "Desk #3",
+      "mapXLocation": "276.455",
+      "mapYLocation": "102.181",
+      "width": "80.464",
+      "height": "34.275",
+      "roomId": 1,
+      "roomName": "Room #1",
+      "status": 0
     },
     {
-      "roomId": 2,
       "id": 4,
-      "name": "Biurko-002-01"
+      "name": "Desk #4",
+      "mapXLocation": "370.329",
+      "mapYLocation": "102.181",
+      "width": "80.464",
+      "height": "34.275",
+      "roomId": 1,
+      "roomName": "Room #1",
+      "status": 2
     },
     {
-      "roomId": 2,
       "id": 5,
-      "name": "Biurko-002-02"
+      "name": "Desk #5",
+      "mapXLocation": "88.706",
+      "mapYLocation": "145.026",
+      "width": "80.464",
+      "height": "34.275",
+      "roomId": 1,
+      "roomName": "Room #1",
+      "status": 0
     },
     {
-      "roomId": 2,
       "id": 6,
-      "name": "Biurko-002-03"
+      "name": "Desk #6",
+      "mapXLocation": "182.58",
+      "mapYLocation": "145.026",
+      "width": "80.464",
+      "height": "34.275",
+      "roomId": 1,
+      "roomName": "Room #1",
+      "status": 2
     },
     {
-      "roomId": 3,
       "id": 7,
-      "name": "Biurko-003-01"
+      "name": "Desk #7",
+      "mapXLocation": "276.455",
+      "mapYLocation": "145.026",
+      "width": "80.464",
+      "height": "34.275",
+      "roomId": 1,
+      "roomName": "Room #1",
+      "status": 0
     },
     {
-      "roomId": 3,
       "id": 8,
-      "name": "Biurko-003-02"
+      "name": "Desk #8",
+      "mapXLocation": "370.329",
+      "mapYLocation": "145.026",
+      "width": "80.464",
+      "height": "34.275",
+      "roomId": 1,
+      "roomName": "Room #1",
+      "status": 0
     },
     {
-      "roomId": 3,
       "id": 9,
-      "name": "Biurko-003-03"
+      "name": "R2-D-1",
+      "mapXLocation": "88",
+      "mapYLocation": "130",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
     },
     {
-      "roomId": 4,
-      "id": 10,
-      "name": "Biurko-004-01"
-    },
-    {
-      "roomId": 4,
-      "id": 11,
-      "name": "Biurko-004-02"
-    },
-    {
-      "roomId": 4,
-      "id": 12,
-      "name": "Biurko-004-03"
-    },
-    {
-      "roomId": 5,
-      "id": 13,
-      "name": "Biurko-005-01"
-    },
-    {
-      "roomId": 5,
-      "id": 14,
-      "name": "Biurko-005-02"
-    },
-    {
-      "roomId": 5,
-      "id": 15,
-      "name": "Biurko-005-03"
-    },
-    {
-      "roomId": 6,
-      "id": 16,
-      "name": "Biurko-006-01"
-    },
-    {
-      "roomId": 6,
-      "id": 17,
-      "name": "Biurko-006-02"
-    },
-    {
-      "roomId": 6,
       "id": 18,
-      "name": "Biurko-006-03"
+      "name": "R2-D-10",
+      "mapXLocation": "390",
+      "mapYLocation": "130",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
+    },
+    {
+      "id": 19,
+      "name": "R2-D-11",
+      "mapXLocation": "390",
+      "mapYLocation": "215",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 2
+    },
+    {
+      "id": 20,
+      "name": "R2-D-12",
+      "mapXLocation": "390",
+      "mapYLocation": "300",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
+    },
+    {
+      "id": 10,
+      "name": "R2-D-2",
+      "mapXLocation": "88",
+      "mapYLocation": "215",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
+    },
+    {
+      "id": 11,
+      "name": "R2-D-3",
+      "mapXLocation": "88",
+      "mapYLocation": "300",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
+    },
+    {
+      "id": 12,
+      "name": "R2-D-4",
+      "mapXLocation": "225",
+      "mapYLocation": "130",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
+    },
+    {
+      "id": 13,
+      "name": "R2-D-5",
+      "mapXLocation": "225",
+      "mapYLocation": "215",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 2
+    },
+    {
+      "id": 14,
+      "name": "R2-D-6",
+      "mapXLocation": "225",
+      "mapYLocation": "300",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
+    },
+    {
+      "id": 15,
+      "name": "R2-D-7",
+      "mapXLocation": "270",
+      "mapYLocation": "130",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 2
+    },
+    {
+      "id": 16,
+      "name": "R2-D-8",
+      "mapXLocation": "270",
+      "mapYLocation": "215",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
+    },
+    {
+      "id": 17,
+      "name": "R2-D-9",
+      "mapXLocation": "270",
+      "mapYLocation": "300",
+      "width": "34.275",
+      "height": "80.464",
+      "roomId": 2,
+      "roomName": "Room #2",
+      "status": 0
     }
   ],
   "history": [
     {
       "id": 1,
-      "userId": 1,
-      "floorNumber": "Piętro 1",
-      "roomNumber": "Pokój 002",
-      "deskNumber": "Biurko-002-01",
-      "date": "12-11-2023"
+      "date": "2024-01-01T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #1",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
     },
     {
       "id": 2,
-      "userId": 1,
-      "floorNumber": "Piętro 1",
-      "roomNumber": "Pokój 003",
-      "deskNumber": "Biurko-003-03",
-      "date": "14-11-2023"
+      "date": "2024-01-02T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #1",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
     },
     {
       "id": 3,
-      "userId": 1,
-      "floorNumber": "Piętro 2",
-      "roomNumber": "Pokój 005",
-      "deskNumber": "Biurko-005-01",
-      "date": "15-11-2023"
+      "date": "2024-01-03T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #1",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
     },
     {
       "id": 4,
-      "userId": 1,
-      "floorNumber": "Piętro 1",
-      "roomNumber": "Pokój 001",
-      "deskNumber": "Biurko-001-02",
-      "date": "18-11-2023"
+      "date": "2024-01-01T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #2",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
     },
     {
       "id": 5,
-      "userId": 1,
-      "floorNumber": "Piętro 1",
-      "roomNumber": "Pokój 002",
-      "deskNumber": "Biurko-002-01",
-      "date": "19-11-2023"
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "floorNumber": "Piętro 1",
-      "roomNumber": "Pokój 003",
-      "deskNumber": "Biurko-003-03",
-      "date": "20-11-2023"
-    },
-    {
-      "id": 7,
-      "userId": 1,
-      "floorNumber": "Piętro 2",
-      "roomNumber": "Pokój 005",
-      "deskNumber": "Biurko-005-01",
-      "date": "21-11-2023"
+      "date": "2024-01-16T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #3",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
     },
     {
       "id": 8,
-      "userId": 1,
-      "floorNumber": "Piętro 1",
-      "roomNumber": "Pokój 001",
-      "deskNumber": "Biurko-001-02",
-      "date": "22-11-2023"
-    },
-    {
-      "id": 9,
-      "userId": 1,
-      "floorNumber": "Piętro 1",
-      "roomNumber": "Pokój 003",
-      "deskNumber": "Biurko-003-03",
-      "date": "23-11-2023"
+      "date": "2024-01-17T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #5",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
     },
     {
       "id": 10,
-      "userId": 1,
-      "floorNumber": "Piętro 2",
-      "roomNumber": "Pokój 005",
-      "deskNumber": "Biurko-005-01",
-      "date": "24-11-2023"
+      "date": "2024-01-23T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #5",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
     },
     {
       "id": 11,
-      "userId": 1,
-      "floorNumber": "Piętro 1",
-      "roomNumber": "Pokój 001",
-      "deskNumber": "Biurko-001-02",
-      "date": "25-11-2023"
+      "date": "2024-01-28T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #2",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    },
+    {
+      "id": 12,
+      "date": "2024-01-31T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #5",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    },
+    {
+      "id": 13,
+      "date": "2024-01-25T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #1",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    },
+    {
+      "id": 15,
+      "date": "2024-01-28T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #5",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    },
+    {
+      "id": 16,
+      "date": "2024-01-28T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #7",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    },
+    {
+      "id": 17,
+      "date": "2024-01-28T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #8",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    },
+    {
+      "id": 22,
+      "date": "2024-01-26T00:00:00",
+      "userName": "John Doe",
+      "deskName": "R2-D-5",
+      "roomName": "Room #2",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    },
+    {
+      "id": 23,
+      "date": "2024-01-20T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #3",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    },
+    {
+      "id": 24,
+      "date": "2024-01-20T00:00:00",
+      "userName": "John Doe",
+      "deskName": "Desk #1",
+      "roomName": "Room #1",
+      "floorName": "Piętro 1",
+      "buildingName": "budynek 1"
+    }
+  ],
+  "issue": [
+    {
+      "description": "Uszkodzony monitor",
+      "status": 1,
+      "deskId": 6,
+      "reporterId": 1,
+      "id": 1
     }
   ]
 }

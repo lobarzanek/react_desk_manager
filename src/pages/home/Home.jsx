@@ -37,7 +37,7 @@ const Home = () => {
         SetIsLoading(true);
         const mapResponse = await GetRoomMap(selected.room, selected.date);
         if (mapResponse.status === 200) {
-          SetMapSVG(mapResponse.data.svgMap);
+          SetMapSVG(mapResponse.data[0].svgMap);
         } else {
           SetMapSVG(emptySVG);
         }
@@ -60,7 +60,7 @@ const Home = () => {
           {
             pending: "Dodawanie rezerwacji..",
             success: "Rezerwacja dodana! 👌",
-            error: "Nie udało się dodać rezerwacji 🤯",
+            error: "Nie udało się dodać rezerwacji 😥",
           }
         );
 
